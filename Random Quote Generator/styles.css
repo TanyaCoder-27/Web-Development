@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74eba0 0%, #e5ace2 100%);
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Quote Styling */
+#quote-box {
+    margin-bottom: 30px;
+    min-height: 100px;
+}
+
+#quote {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+#quote.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #a6ff6b 0%, #f6ff00 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.4s ease-in-out, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #000dff 0%, #6b73ff 100%);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes buttonHover {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
